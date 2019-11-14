@@ -5,6 +5,45 @@ $primary: #ffa31a;
 $secondary: #2f2f2f;
 $text-primary: #cacaca;
 
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  .first-row {
+    background: $dark;
+
+    a {
+      font-size: 13px;
+      color: $primary;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    strong {
+      text-transform: capitalize;
+      font-size: 1.33em;
+      font-weight: 700;
+      color: grey;
+    }
+  }
+
+  .second-row {
+    i {
+      color: $text-primary
+    }
+
+    span {
+      color: #555;
+      font-size: 15px;
+    }
+  }
+}
+
 .top-bar {
   text-transform: uppercase;
   background: $background;
@@ -13,7 +52,7 @@ $text-primary: #cacaca;
     height: 22px;
     font-size: 11px;
     color: #BBBBBB;
-    padding: 7px 24px 7px 24px;
+    padding: 6px 24px 2px 24px;
   }
 
   a:first-of-type {
@@ -157,9 +196,11 @@ body {
     font-size: 15px;
     color: $primary
   }
+
   .author {
     color: #cacaca
   }
+
   .viewer-count, .likes {
     font-size: 15px;
     color: #cacaca

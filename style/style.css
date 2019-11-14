@@ -1,3 +1,33 @@
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .first-row {
+  background: #1b1b1b;
+}
+footer .first-row a {
+  font-size: 13px;
+  color: #ffa31a;
+}
+footer .first-row li {
+  margin-bottom: 5px;
+}
+footer .first-row strong {
+  text-transform: capitalize;
+  font-size: 1.33em;
+  font-weight: 700;
+  color: grey;
+}
+footer .second-row i {
+  color: #cacaca;
+}
+footer .second-row span {
+  color: #555;
+  font-size: 15px;
+}
+
 .top-bar {
   text-transform: uppercase;
   background: #000000;
@@ -6,7 +36,7 @@
   height: 22px;
   font-size: 11px;
   color: #BBBBBB;
-  padding: 7px 24px 7px 24px;
+  padding: 6px 24px 2px 24px;
 }
 .top-bar a:first-of-type {
   padding-left: 0;
