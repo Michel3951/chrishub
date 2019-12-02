@@ -218,6 +218,38 @@ body {
   color: #cacaca !important;
 }
 
+.card-img-top {
+  border-radius: 0;
+}
+
+.card-body {
+  background: $dark;
+  border-color: transparent;
+}
+
+.card {
+  border-radius: 0;
+  background: $dark;
+  border-color: transparent;
+}
+
+.video {
+  h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14pt;
+  }
+
+  i {
+    color: $text-primary;
+  }
+
+  .social-bar {
+    color: $text-primary;
+    font-size: 17px;
+  }
+}
+
 h2 {
   font-size: 14px;
   font-weight: 700

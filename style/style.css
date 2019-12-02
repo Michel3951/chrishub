@@ -177,6 +177,34 @@ body {
   color: #cacaca !important;
 }
 
+.card-img-top {
+  border-radius: 0;
+}
+
+.card-body {
+  background: #1b1b1b;
+  border-color: transparent;
+}
+
+.card {
+  border-radius: 0;
+  background: #1b1b1b;
+  border-color: transparent;
+}
+
+.video h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14pt;
+}
+.video i {
+  color: #cacaca;
+}
+.video .social-bar {
+  color: #cacaca;
+  font-size: 17px;
+}
+
 h2 {
   font-size: 14px;
   font-weight: 700;

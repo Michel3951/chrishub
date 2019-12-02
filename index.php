@@ -1,11 +1,17 @@
-<?php $root = preg_replace('/[a-zA-Z]+\.[a-zA-Z]+/', '', $_SERVER['PHP_SELF']) ?>
+<?php $root = $_SERVER['DOCUMENT_ROOT'] . '/chrishub' ?>
 <!doctype HTML>
 <html lang="en">
 <head>
-    <title>Chrishub</title>
-    <link rel="stylesheet" href="<?php echo $root ?>/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="<?php echo $root ?>/style/style.css">
+<?php
+if (isset($_GET['title']) && !empty($_GET['title'])) {
+    print "<title>Chrishub - {$_GET['title']}</title>";
+} else {
+    print "<title>Chrishub</title>";
+}
+?>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 <div id="app">
@@ -99,9 +105,8 @@
     <div class="container">
         <?php
         if (preg_match('/\.php|\.html/', $_SERVER['PHP_SELF'])) {
-            $uri = preg_replace('/chrishub|[\/]+|\.[a-z]+/', '', $_SERVER['PHP_SELF']);
-            $routes = ['index'];
-
+            $uri = preg_replace('/chrishub|[\/]+|\.[a-z]+/', '', $_SERVER['REQUEST_URI']);
+            $routes = ['index', 'video'];
             if (in_array($uri, $routes)) {
                 include "views/$uri.html";
             }
